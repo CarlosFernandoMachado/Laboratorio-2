@@ -7,6 +7,9 @@ using std::endl;
 
 double euler(int x);
 int factorial(int x);
+int distancia(int x1, int y1, int x2, int y2);
+int altura (int a, int b, int c, int s, int d);
+
 int main(int argc, char*argv[]){
 	char menu;
 	int menus;
@@ -21,7 +24,40 @@ int main(int argc, char*argv[]){
 			cout << euler(potencia) << endl;
 		}
 		if (menus == 2){
-			float x1,y1,x2,y2,x3,y3
+			float x1,y1,x2,y2,x3,y3,x4,y4;
+			bool seguir = true;
+			while (seguir){
+				seguir = false;
+				cout << "Ingrese x1: ";
+				cin >> x1;
+				cout << "Ingrese y1: ";
+				cin >> y1;
+				cout << "Ingrese x2: ";
+				cin >> x2;
+				cout << "Ingrese y2: ";
+				cin >> y2;
+				cout << "Ingrese x3: ";
+				cin >> x3;
+				cout << "Ingrese y3: ";
+				cin >> y3;
+				cout << "Ingrese x4: ";
+				cin >> x4;
+				cout << "Ingrese y4: ";
+				cin >> y4;
+				if (x1 == x2 && x1 == x3 && x1 == x4 && y1 == y2 && y1 == y3 && y1 == y4){
+					cout << "Los puntos no pueden estar uno encima del otro" << endl;	
+					seguir = true;		
+				}
+				if (y1 == y2 && y1 == y3 && y1 == y4){
+					cout << "Los puntos no pueden estar en la misma fila" << endl;		
+					seguir = true;
+				}
+				if (x1 == x2 && x1 == x3 && x1 == x4){
+					cout << "Los puntos no pueden estar en la misma fila" << endl;
+					seguir = true;		
+				}
+			}
+			
 		}
 		cout << "Desea salir [y/n]" << endl;
 		cin >> menu;
@@ -53,4 +89,26 @@ int factorial(int x){
 		acumulador *= i;
 	}
 	return acumulador;
+}
+int distancia(int x1, int y1, int x2, int y2){
+	int distancia;
+	x1 = x2 - x1;
+	y1 = y2 - y1;
+	x1 = pow(x1,2);
+	y1 = pow(y1,2);
+	x1 = x1 + y1;
+	distancia = sqrt(x1);
+}
+int altura (int a, int b, int c, int s, int d){
+	int alt;
+	alt = (2/d)*(sqrt(s*(s-a)*(s-b)*(s-c)));
+	return d;
+}
+int semiperimetro(int a, int b, int c){
+	int semi;
+	semi = (a+b+c)/2;
+}
+int perimetro (int a, int b, int c, int d){
+	int suma = a + b + c + d;
+	return suma;
 }
