@@ -1,6 +1,9 @@
 # include <iostream>
 # include <cmath>
-
+//ID: 11441301
+//Nombre: Carlos Machado
+//github: CarlosFernandoMachado
+//link: https://github.com/CarlosFernandoMachado/Laboratorio-2.git
 using std::cout;
 using std::cin;
 using std::endl;
