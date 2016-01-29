@@ -9,6 +9,8 @@ double euler(int x);
 int factorial(int x);
 int distancia(int x1, int y1, int x2, int y2);
 int altura (int a, int b, int c, int s, int d);
+int semiperimetro(int a, int b, int c);
+int perimetro (int a, int b, int c, int d);
 
 int main(int argc, char*argv[]){
 	char menu;
@@ -57,6 +59,21 @@ int main(int argc, char*argv[]){
 					seguir = true;		
 				}
 			}
+			int dist1,dist2,dist3,dist4,dist5;
+			dist1 = distancia(x1,y1,x4,y4);
+			dist2 = distancia(x1,y1,x2,y2);
+			dist3 = distancia(x2,y2,x4,y4);
+			dist4 = distancia(x1,y1,x3,y3);
+			dist5 = distancia(x3,y3,x4,y4);
+			int h1,h2,h3,h4,h5,h6;
+			int semi1,semi2;
+			semi1 = semiperimetro(dist1, dist2, dist3);
+			h1 = altura(dist1, dist2,dist3,semi1,dist1);
+			h2 = altura(dist1, dist2,dist3,semi1,dist1);
+			h3 = altura(dist1, dist2,dist3,semi1,dist1);
+			h4 = altura(dist1, dist2,dist3,semi1,dist1);
+			h5 = altura(dist1, dist2,dist3,semi1,dist1);
+			h6 = altura(dist1, dist2,dist3,semi1,dist1);
 			
 		}
 		cout << "Desea salir [y/n]" << endl;
@@ -111,4 +128,8 @@ int semiperimetro(int a, int b, int c){
 int perimetro (int a, int b, int c, int d){
 	int suma = a + b + c + d;
 	return suma;
+}
+int area (int a, int b, int c){
+	int ar;
+	ar = ((a*b)/2)+((a*c)/2);
 }

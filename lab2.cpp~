@@ -8,6 +8,9 @@ using std::endl;
 double euler(int x);
 int factorial(int x);
 int distancia(int x1, int y1, int x2, int y2);
+int altura (int a, int b, int c, int s, int d);
+int semiperimetro(int a, int b, int c);
+int perimetro (int a, int b, int c, int d);
 
 int main(int argc, char*argv[]){
 	char menu;
@@ -101,4 +104,17 @@ int distancia(int x1, int y1, int x2, int y2){
 int altura (int a, int b, int c, int s, int d){
 	int alt;
 	alt = (2/d)*(sqrt(s*(s-a)*(s-b)*(s-c)));
+	return d;
+}
+int semiperimetro(int a, int b, int c){
+	int semi;
+	semi = (a+b+c)/2;
+}
+int perimetro (int a, int b, int c, int d){
+	int suma = a + b + c + d;
+	return suma;
+}
+int area (int a, int b, int c){
+	int ar;
+	ar = ((a*b)/2)+((a*c)/2);
 }
