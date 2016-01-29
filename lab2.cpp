@@ -7,11 +7,11 @@ using std::endl;
 
 double euler(int x);
 int factorial(int x);
-int distancia(double x1, double y1, double x2, double y2);
-int altura (double a, double b, double c, double s, double d);
-int semiperimetro(double a, double b, double c);
-int perimetro (double a, double b, double c, double d);
-int area (double a, double b, double c);
+double distancia(double x1, double y1, double x2, double y2);
+double altura (double a, double b, double c, double s, double d);
+double semiperimetro(double a, double b, double c);
+double perimetro (double a, double b, double c, double d);
+double area (double a, double b, double c);
 
 int main(int argc, char*argv[]){
 	char menu;
@@ -140,29 +140,32 @@ int factorial(int x){
 	}
 	return acumulador;
 }
-int distancia(double x1, double y1, double x2, double y2){
+double distancia(double x1, double y1, double x2, double y2){
 	double distancia;
 	x1 = x2 - x1;
 	y1 = y2 - y1;
-	x1 = pow(x1,2);
-	y1 = pow(y1,2);
+	x1 = pow(x1,2.0);
+	y1 = pow(y1,2.0);
 	x1 = x1 + y1;
 	distancia = sqrt(x1);
+	return distancia*1.0;
 }
-int altura (double a, double b, double c, double s, double d){
+double altura (double a, double b, double c, double s, double d){
 	double alt;
-	alt = (2/d)*(sqrt(s*(s-a)*(s-b)*(s-c)));
-	return d;
+	alt = (2.0/d)*(sqrt(s*(s-a)*(s-b)*(s-c)));
+	return alt*1.0;
 }
-int semiperimetro(double a, double b, double c){
+double semiperimetro(double a, double b, double c){
 	double semi;
-	semi = (a+b+c)/2;
+	semi = (a+b+c)/2.0;
+	return semi*1.0;
 }
-int perimetro (double a, double b, double c, double d){
+double perimetro (double a, double b, double c, double d){
 	double suma = a + b + c + d;
-	return suma;
+	return suma*1.0;
 }
-int area (double a, double b, double c){
+double area (double a, double b, double c){
 	double ar;
-	ar = ((a*b)/2)+((a*c)/2);
+	ar = ((a*b)/2.0)+((a*c)/2.0);
+	return ar*1.0;
 }

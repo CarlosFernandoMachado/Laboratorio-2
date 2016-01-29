@@ -141,28 +141,31 @@ int factorial(int x){
 	return acumulador;
 }
 int distancia(double x1, double y1, double x2, double y2){
-	int distancia;
+	double distancia;
 	x1 = x2 - x1;
 	y1 = y2 - y1;
-	x1 = pow(x1,2);
-	y1 = pow(y1,2);
+	x1 = pow(x1,2.0);
+	y1 = pow(y1,2.0);
 	x1 = x1 + y1;
 	distancia = sqrt(x1);
+	return distancia*1.0;
 }
 int altura (double a, double b, double c, double s, double d){
-	int alt;
-	alt = (2/d)*(sqrt(s*(s-a)*(s-b)*(s-c)));
-	return d;
+	double alt;
+	alt = (2.0/d)*(sqrt(s*(s-a)*(s-b)*(s-c)));
+	return alt*1.0;
 }
 int semiperimetro(double a, double b, double c){
-	int semi;
-	semi = (a+b+c)/2;
+	double semi;
+	semi = (a+b+c)/2.0;
+	return semi*1.0;
 }
 int perimetro (double a, double b, double c, double d){
-	int suma = a + b + c + d;
-	return suma;
+	double suma = a + b + c + d;
+	return suma*1.0;
 }
 int area (double a, double b, double c){
-	int ar;
-	ar = ((a*b)/2)+((a*c)/2);
+	double ar;
+	ar = ((a*b)/2.0)+((a*c)/2.0);
+	return ar*1.0;
 }
